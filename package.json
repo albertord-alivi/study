@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "@types/node": "^18.0.0"
+  },
+  "peerDependencies": {
+    "immutable": "*"
+  },
+  "dependencies": {
+    "immutable-ext": "^1.1.5"
+  }
+}
