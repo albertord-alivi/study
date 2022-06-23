@@ -78,8 +78,6 @@ result = List.of(1,2,3,4).foldMap(Sum, Sum.empty())
 result = new Map({a: 2, b: 4, c: 8}).foldMap(Prod, Prod(2))
 console.log("Fold", result)
 
-const foldMap = (m, empty?) => map(typeof(m)).reduce((acc, v) => (acc.concat(v), empty ?? m)) 
-
 // result = List.of(
 //   Map({a: Sum(1), b: Any(true),  c: "son", d: [1], e: 'wut'}),
 //   Map({a: Sum(2), b: Any(false), c: "ofa", d: [2]}),
