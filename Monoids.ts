@@ -70,12 +70,15 @@ result = List([true, true, false]).foldMap(All, All.empty())
 console.log("Result foldMap: ", result.x)
 
 result = List.of([1,2,3], [4,5,6], 7).fold()  // [ 1, 2, 3, 4, 5, 6, 7 ]
-result = List.of(true, true, false).fold([])  // 
-// result = new Map({a: "hidy", b: "hidy", c: "ho"}).fold("")
-// result = new Map({a: Prod(2), b: Prod(4), c: Prod(8)}).fold(Prod.empty())
-// result = List.of(1,2,3,4).foldMap(Sum, Sum.empty())
-// result = new Map({a: 2, b: 4, c: 8}).foldMap(Prod, Prod(2))
+result = List.of(true, true, false).fold([])  // [ true, true, false ]
+result = new Map({a: "hidy", b: "hidy", c: "ho"}).fold()    // "hidyhidyho"
+result = new Map({a: "hidy", b: "hidy", c: "ho"}).fold([])  // [ 'hidy', 'hidy', 'ho' ]
+result = new Map({a: Prod(2), b: Prod(4), c: Prod(8)}).fold(Prod.empty()) // { x : 64 concat:... }
+result = List.of(1,2,3,4).foldMap(Sum, Sum.empty())
+result = new Map({a: 2, b: 4, c: 8}).foldMap(Prod, Prod(2))
 console.log("Fold", result)
+
+const foldMap = (m, empty?) => map(typeof(m)).reduce((acc, v) => (acc.concat(v), empty ?? m)) 
 
 // result = List.of(
 //   Map({a: Sum(1), b: Any(true),  c: "son", d: [1], e: 'wut'}),
