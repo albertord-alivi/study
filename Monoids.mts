@@ -16,6 +16,7 @@ const Sum = (x) => ({
   concat: (other) => Sum(x += other.x),
 });
 Sum.empty = () => Sum(0);
+// export default Sum
 
 // result = Sum(3).concat(Sum(4)).concat(Sum.empty())
 // console.log("Result: ", result.x)
