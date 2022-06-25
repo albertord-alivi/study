@@ -9,6 +9,12 @@
     "@types/lodash": "^4.14.182",
     "fp-ts": "^2.12.1",
     "immutable-ext": "^1.1.5",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "typescript": "^4.7.4"
+  },
+  "scripts": {
+    "functor": "tsc ./Functors.mts && node ./Functors.js && rm ./Functors.js",
+    "monad": "tsc ./Monad.ts && node ./Monad.js && rm ./Monad.js",
+    "monoid": "tsc ./Monoids.mts && node ./Monoids.js && rm ./Monoids.js"
   }
 }
