@@ -1,5 +1,3 @@
-const { task } = require("fp-ts");
-
 const { feft, right, Either, Task } = require("fp-ts/Either")
 
 const { List } = require("immutable-ext");
@@ -100,9 +98,6 @@ console.log("Alt", result.extract());
 
 // Task functor
 console.log("Task functor")
-
-result = task("Hello")
-console.log("Task", result)
 
 console.log("Functors");
 // */
