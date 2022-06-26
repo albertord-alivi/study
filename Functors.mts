@@ -1,3 +1,5 @@
+const { task } = require("fp-ts");
+
 const { feft, right, Either, Task } = require("fp-ts/Either")
 
 const { List } = require("immutable-ext");
@@ -85,10 +87,22 @@ result = Alternative(Right('ok 1 '))
   .concat(Alternative(Left('fail 1 ')))
   .concat(Alternative(Right('ok 2 ')))
   .concat(Alternative(Left('fail 2 ')));
-// result = List.of(Right('ok 1'), Left('fail 1'), Right('ok 2'), Left('fail 2')).fold();
 console.log("Alt", result.extract());
-// console.log("Alt", result);
+result = List.of(
+    Alternative(Right('ok 1')), 
+    Alternative(Left('fail 1')), 
+    Alternative(Right('ok 2')), 
+    Alternative(Left('fail 2'))
+  )
+  .fold();
+console.log("Alt", result.extract());
 
+
+// Task functor
+console.log("Task functor")
+
+result = task("Hello")
+console.log("Task", result)
 
 console.log("Functors");
 // */
