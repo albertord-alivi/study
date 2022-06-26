@@ -1,6 +1,6 @@
 const { feft, right, Either, Task } = require("fp-ts/Either")
 
-const { List, Map } = require("immutable-ext");
+const { List } = require("immutable-ext");
 
 // const { Sum } = import("../Study/Monoids");
 // Sum
