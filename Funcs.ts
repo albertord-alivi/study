@@ -1,0 +1,1 @@
+export const SomeFunc = (n) => n + 1

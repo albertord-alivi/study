@@ -1,3 +1,3 @@
-//
+import { SomeFunc } from './Funcs'
 
-console.log("something")
+console.log(SomeFunc(2))
